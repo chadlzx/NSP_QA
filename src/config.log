@@ -1,0 +1,39 @@
+2022-10-06 20:32:23,636-baseline.py-INFO- Namespace(add_number_token=False, additional_program_level=-1, answering_abilities=['program'], as_label='f1', bart_model='facebook/bart-large', batch_size=8, bert_learning_rate=1e-05, bert_weight_decay=0.01, checkpoint_path='', checkpoint_path2='', classifier_method=1, count_bad_probility=-1, count_down_sampling=-1, data_argument=False, data_dir='/opt/tiger/drop_dataset/data/', debug_mode=False, delete_all_count_program=False, delete_long_string_in_program=False, delete_no_number_answer=True, delete_null_program=False, do_eval=True, do_test=False, do_train=True, dropout=0.1, encoder_type='bart_encoder', eps=1e-08, eval_batch_size=8, eval_dataset_sample=-1, flexible_train=False, get_old_train_answers=False, grad_clipping=1.0, gradient_accumulation_steps=1, in_trial=False, lambda_is_ok_for_spans=0.0, lambda_list=[1.0], lamda=1.0, learning_rate=1e-05, load_checkpoint=False, local_rank=None, log_per_updates=100, loss_type='all', lr_scheduler_constant=True, max_epoch=20, multispan_head_name='flexible_loss', name_of_this_trial='bart_training', no_add_number_token_text=False, no_train_bart=False, num_decoder_layers=12, num_eval_epoch=1, num_eval_step=-1, optimizer='adam', override_checkpoint=False, passage_length_limit=463, pre_path='/opt/tiger/drop_dataset/data/', pre_train_program=False, program_annotation_method='only_annotation', program_model='', program_multiple_times=-1, question_length_limit=46, roberta_model='roberta-large', save_dir='output/bart_training/', save_model=True, seed=1453, span_model='', start_epoch=-1, train_dataset_sample=-1, train_dataset_v2=False, training_with_generate=False, upload_model=False, use_original_loss=False, valid_program_used=False, warmup=-1.0, warmup_schedule='warmup_linear', weight_decay=5e-05)
+2022-10-06 20:32:23,693-baseline.py-INFO- start preprocess
+2022-10-06 20:32:23,762-drop_reader-INFO- add additional questionId2program: 25076
+2022-10-06 20:32:53,706-urllib3.connectionpool-DEBUG- Starting new HTTPS connection (1): huggingface.co:443
+2022-10-06 20:32:54,966-urllib3.connectionpool-DEBUG- https://huggingface.co:443 "HEAD /roberta-large/resolve/main/vocab.json HTTP/1.1" 200 0
+2022-10-06 20:32:54,979-urllib3.connectionpool-DEBUG- Starting new HTTPS connection (1): huggingface.co:443
+2022-10-06 20:32:56,195-urllib3.connectionpool-DEBUG- https://huggingface.co:443 "HEAD /roberta-large/resolve/main/merges.txt HTTP/1.1" 200 0
+2022-10-06 20:32:56,201-urllib3.connectionpool-DEBUG- Starting new HTTPS connection (1): huggingface.co:443
+2022-10-06 20:32:57,493-urllib3.connectionpool-DEBUG- https://huggingface.co:443 "HEAD /roberta-large/resolve/main/added_tokens.json HTTP/1.1" 404 0
+2022-10-06 20:32:57,495-urllib3.connectionpool-DEBUG- Starting new HTTPS connection (1): huggingface.co:443
+2022-10-06 20:32:58,754-urllib3.connectionpool-DEBUG- https://huggingface.co:443 "HEAD /roberta-large/resolve/main/special_tokens_map.json HTTP/1.1" 404 0
+2022-10-06 20:32:58,758-urllib3.connectionpool-DEBUG- Starting new HTTPS connection (1): huggingface.co:443
+2022-10-06 20:32:59,881-urllib3.connectionpool-DEBUG- https://huggingface.co:443 "HEAD /roberta-large/resolve/main/tokenizer_config.json HTTP/1.1" 404 0
+2022-10-06 20:32:59,885-urllib3.connectionpool-DEBUG- Starting new HTTPS connection (1): huggingface.co:443
+2022-10-06 20:33:01,012-urllib3.connectionpool-DEBUG- https://huggingface.co:443 "HEAD /roberta-large/resolve/main/config.json HTTP/1.1" 200 0
+2022-10-06 20:33:01,082-baseline.py-INFO- end preprocess
+2022-10-06 20:33:01,082-baseline.py-INFO- start get dataloader
+2022-10-06 20:35:04,388-baseline.py-INFO- end get dataloader
+2022-10-06 20:35:04,393-baseline.py-INFO- start build model
+2022-10-06 20:35:04,425-urllib3.connectionpool-DEBUG- Starting new HTTPS connection (1): huggingface.co:443
+2022-10-06 20:35:05,947-urllib3.connectionpool-DEBUG- https://huggingface.co:443 "HEAD /roberta-large/resolve/main/config.json HTTP/1.1" 200 0
+2022-10-06 20:35:05,960-urllib3.connectionpool-DEBUG- Starting new HTTPS connection (1): huggingface.co:443
+2022-10-06 20:35:07,167-urllib3.connectionpool-DEBUG- https://huggingface.co:443 "HEAD /roberta-large/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2022-10-06 20:35:25,849-urllib3.connectionpool-DEBUG- Starting new HTTPS connection (1): huggingface.co:443
+2022-10-06 20:35:27,172-urllib3.connectionpool-DEBUG- https://huggingface.co:443 "HEAD /facebook/bart-large/resolve/main/config.json HTTP/1.1" 200 0
+2022-10-06 20:35:27,205-urllib3.connectionpool-DEBUG- Starting new HTTPS connection (1): huggingface.co:443
+2022-10-06 20:35:28,569-urllib3.connectionpool-DEBUG- https://huggingface.co:443 "HEAD /facebook/bart-large/resolve/main/pytorch_model.bin HTTP/1.1" 302 0
+2022-10-06 20:35:33,560-baseline.py-INFO- end build model
+2022-10-06 20:35:33,572-baseline.py-INFO- Start training.
+2022-10-06 20:35:33,593-baseline.py-INFO- Start epoch 1
+2022-10-06 20:35:48,264-baseline.py-INFO- Answering abilities loss:[16.519432067871094]
+2022-10-06 20:35:48,271-baseline.py-INFO- loss for valid methods:0.9612929821014404
+2022-10-06 20:35:48,295-baseline.py-INFO- QDGAT step:1 loss: 16.519432067871094 result: +-------------+---------------+---------------+---------------+---------------+---------------+---------------+
+|     way     |     number    |      span     |     spans     |   span+spans  |      date     |      real     |
++-------------+---------------+---------------+---------------+---------------+---------------+---------------+
+|   program   | [0.0, 0.0, 0] | [0.0, 0.0, 0] | [0.0, 0.0, 0] | [0.0, 0.0, 0] | [0.0, 0.0, 0] | [0.0, 0.0, 0] |
+| best_answer | [0.0, 0.0, 0] | [0.0, 0.0, 0] | [0.0, 0.0, 0] | [0.0, 0.0, 0] | [0.0, 0.0, 0] | [0.0, 0.0, 0] |
+|    total    | [0.0, 0.0, 0] | [0.0, 0.0, 0] | [0.0, 0.0, 0] | [0.0, 0.0, 0] | [0.0, 0.0, 0] |   [0, 0, 0]   |
++-------------+---------------+---------------+---------------+---------------+---------------+---------------+

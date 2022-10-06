@@ -1,0 +1,16 @@
+torchvision
+tqdm
+tensorflow
+tensorboard
+tensorboardX
+flask
+allennlp==0.8.5
+word2number
+jsonlines
+transformers
+datasets
+number-parser
+overrides==3.0.0
+torch==1.7.0
+pandas
+prettytable
